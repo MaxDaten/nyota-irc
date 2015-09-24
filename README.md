@@ -16,3 +16,4 @@ Haskell based irc web client &amp; web service (in brain dumping phase)
 ## References
 
 - [This package provides an IRC connection library as well as a console-based IRC client that uses the library.](http://hackage.haskell.org/package/irc-core=)
+- [Wagon: Haskell + Electron + React](https://speakerdeck.com/mkscrg/electron-react-and-haskell-oh-my)
