@@ -1,0 +1,6 @@
+flags: {}
+packages:
+- 'nyota-web'
+- 'nyota-backend'
+extra-deps: []
+resolver: lts-3.7

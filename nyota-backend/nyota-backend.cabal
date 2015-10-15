@@ -1,0 +1,41 @@
+name:                nyota-backend
+version:             0.1.0.0
+synopsis:            Backend service for the nyota web client
+description:         Please see README.md
+homepage:            http://github.com/MaxDaten/nyota-irc#readme
+license:             MIT
+license-file:        LICENSE
+author:              Jan-Philip Loos
+maintainer:          maxdaten@gmail.com
+copyright:           2015 Jan-Philip Loos
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+
+executable server-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , nyota-backend
+  default-language:    Haskell2010
+
+test-suite server-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , nyota-backend
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/MaxDaten/nyota-irc
